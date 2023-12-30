@@ -11,7 +11,7 @@ const UpdateUsers = () => {
 
   const handleSubmit =(e)=>{
      e.preventDefault()
-     axios.put('http://localhost:3100/updateuser/'+id,{userName,email,age})
+     axios.put('https://crud-backend-odmq.onrender.com/updateuser/'+id,{userName,email,age})
      .then(result=>{
       console.log(result)
       navigate('/')
@@ -20,7 +20,7 @@ const UpdateUsers = () => {
   }
 
   useEffect(()=>{
-    axios.get('http://localhost:3100/getuser/'+id)
+    axios.get('hhttps://crud-backend-odmq.onrender.com/getuser/'+id)
     .then((result)=>{
       console.log(result)
       setUserName(result.data.userName)

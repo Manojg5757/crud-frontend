@@ -20,7 +20,7 @@ const CreateUser = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3100/createuser", { userName, email, age })
+      .post("https://crud-backend-odmq.onrender.com/createuser", { userName, email, age })
       .then((result) => {
         console.log(result);
         navigate('/')

@@ -8,14 +8,14 @@ const Users = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3100")
+      .get("https://crud-backend-odmq.onrender.com")
       .then((result) => setUser(result.data))
       .catch((err) => console.log(err));
   }, []);
 
   const deleteUser = (id) => {
     axios
-      .delete("http://localhost:3100/deleteuser/" + id)
+      .delete("https://crud-backend-odmq.onrender.com/deleteuser/" + id)
       .then((response) => {
         console.log(response.data);
         setUser((prevUser) => prevUser.filter((user) => user._id !== id));
